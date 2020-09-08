@@ -7,7 +7,7 @@ python3.pkgs.buildPythonPackage rec {
   src = python3.pkgs.fetchPypi {
     pname = "PyDrive2";
     inherit version;
-    sha256 = "0000000000000000000000000000000000000000000000000000";
+    sha256 = "0b803dq6g13zypqplwi4bzdjmsdrxmvfiba9121wma51j83350kp";
   };
 
   propagatedBuildInputs = with python3.pkgs; [
