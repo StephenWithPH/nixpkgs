@@ -23,8 +23,8 @@ python3.pkgs.buildPythonPackage rec {
   propagatedBuildInputs = with python3.pkgs; [
     google_api_python_client
     oauth2client
-    pyyaml
     pyopenssl
+    pyyaml
   ];
 
   meta = {
