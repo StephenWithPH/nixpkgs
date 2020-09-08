@@ -13,6 +13,7 @@ python3.pkgs.buildPythonPackage rec {
   checkInputs = with python3.pkgs; [
     funcy
     pytest
+    timeout-decorator
   ];
 
   checkPhase = ''
