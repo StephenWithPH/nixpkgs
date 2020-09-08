@@ -10,6 +10,11 @@ python3.pkgs.buildPythonPackage rec {
     sha256 = "0b803dq6g13zypqplwi4bzdjmsdrxmvfiba9121wma51j83350kp";
   };
 
+  checkInputs = with python3.pkgs; [
+    funcy
+    pytest
+  ];
+
   propagatedBuildInputs = with python3.pkgs; [
     google_api_python_client
     oauth2client
