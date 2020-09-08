@@ -15,6 +15,10 @@ python3.pkgs.buildPythonPackage rec {
     pytest
   ];
 
+  checkPhase = ''
+    pytest -m 'not manual'
+  '';
+
   propagatedBuildInputs = with python3.pkgs; [
     google_api_python_client
     oauth2client
