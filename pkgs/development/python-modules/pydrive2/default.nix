@@ -10,15 +10,7 @@ python3.pkgs.buildPythonPackage rec {
     sha256 = "0b803dq6g13zypqplwi4bzdjmsdrxmvfiba9121wma51j83350kp";
   };
 
-  checkInputs = with python3.pkgs; [
-    funcy
-    pytest
-    timeout-decorator
-  ];
-
-  checkPhase = ''
-    pytest -m 'not manual'
-  '';
+  doCheck = false; # the tests require your GCP credentials
 
   propagatedBuildInputs = with python3.pkgs; [
     google_api_python_client
